@@ -11,4 +11,6 @@ class Study < ApplicationRecord
   scope :user_studies, lambda { |id|
     where(user_id: id)
   }
+
+  scope :order_study_data, -> { user_studies(@current_user.id).order(:created_at, :desc) }
 end
