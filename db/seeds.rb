@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+9.times do |i|
+  Study.create(
+    user_id: 1,
+    name: "Novel",
+    hours: 100,
+    hours_goal: 200,
+    projects: 5,
+    projects_goal: 30
+  )
+end
