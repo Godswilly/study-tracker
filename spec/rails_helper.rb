@@ -55,5 +55,5 @@ RSpec.configure do |config|
     end
   end
 
-  config.include RequestSpecHelper, type: :request
+  # config.include RequestSpecHelper, type: :request
 end
