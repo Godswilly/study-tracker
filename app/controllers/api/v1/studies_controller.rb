@@ -8,7 +8,7 @@ class Api::V1::StudiesController < ApplicationController
   end
 
   def create
-    study = @current_user.studies.build(name: params[:name], hours: params[:hours], hours_goal: params[:hours_goal], projects: params[:projects], projects_goal: params[:projects_goal],user_id: current_user)
+    study = @current_user.studies.build(hours: params[:hours], goal: params[:goal], user_id: current_user)
     if study.save
       render json: study, status: :created
     else
@@ -43,7 +43,7 @@ class Api::V1::StudiesController < ApplicationController
   private
 
   def study_params
-    params.require(:study).permit(:name, :hours, :hours_goal, :projects, :projects_goal, :user_id)
+    params.require(:study).permit(:hours, :goal, :user_id)
   end
 
   def set_study

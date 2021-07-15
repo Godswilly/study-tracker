@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'levels/progress'
-  resources :studies, except: [:index]
+  namespace :api do
+    namespace :v1 do
+      get 'levels/progress'
+      resources :studies, except: [:index]
 
-  get '/allData', to: 'studies#index'
+      get '/allStudies', to: 'studies#index'
 
-  post '/signup', to: 'users#create'
-  post 'auth/login', to: 'authentication#authenticate'
+      post '/signup', to: 'users#create'
+      post 'auth/login', to: 'authentication#authenticate'
+    end
+  end
 end
