@@ -10,11 +10,4 @@ class Study < ApplicationRecord
   }
 
   scope :order_study_data, -> { user_studies(@current_user.id).order(:created_at, :desc) }
-
-  def self.progress(study)
-    hash = {}
-    hash['hours'] = study.inject(0) { |sum, e| sum + e.hours }
-    hash['goal'] = study.inject(0) { |sum, e| sum + e.goal }
-    hash
-  end
 end

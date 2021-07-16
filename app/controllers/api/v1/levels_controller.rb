@@ -3,7 +3,7 @@ class Api::V1::LevelsController < ApplicationController
 
   def progress
     study = Study.user_studies(current_user)
-    progress_data = Study.progress(study)
+    progress_data = Study.progress_calculation(study)
     render json: { progress: progress_data }
   end
 end
