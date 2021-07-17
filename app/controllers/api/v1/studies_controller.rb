@@ -8,7 +8,8 @@ class Api::V1::StudiesController < ApplicationController
   end
 
   def create
-    study = @current_user.studies.build(hours: params[:hours], goal: params[:goal], user_id: current_user)
+    # study = @current_user.studies.build(hours: params[:hours], goal: params[:goal], user_id: current_user)
+    study = Study.create!(study_params)
     if study.save
       render json: study, status: :created
     else
