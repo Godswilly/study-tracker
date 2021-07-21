@@ -3,7 +3,7 @@ class Api::V1::StudiesController < ApplicationController
   before_action :set_study, only: %i[show update destroy]
 
   def index
-    study = Study.user_studies(current_user)
+    study = Study.user_studies(@current_user)
     render json: study
   end
 
