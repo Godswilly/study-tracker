@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       get '/allStudies', to: 'studies#index'
 
       post '/signup', to: 'users#create'
-      post 'auth/login', to: 'authentication#authenticate'
+      post 'auth/login', to: 'authentication#create'
     end
   end
 end
