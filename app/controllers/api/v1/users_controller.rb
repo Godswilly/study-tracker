@@ -4,15 +4,15 @@ class Api::V1::UsersController < ApplicationController
   # POST /signup
   # return authenticated token upon signup
   def create
-    @user = User.create!(user_params)
-    if @user.valid?
+    @user = User.new(user_params)
+    if @user.save
       auth_token = AuthenticateUser.new(@user.email, @user.password).call
       render json: { user: {
         name: @user.name,
         email: @user.email
       }, auth_token: auth_token }
     else
-      render json: { error: @user.errors.full_messages }, status: :unauthorized
+      render json: { error: @user.errors }, status: :unauthorized
     end
   end
 

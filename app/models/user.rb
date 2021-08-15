@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   has_many :studies, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true, length: { minimum: 3 }
   validates :email, presence: true, uniqueness: true, length: { minimum: 11 }
   validates :password, presence: true, length: { minimum: 6 }, confirmation: true
   validates_confirmation_of :password

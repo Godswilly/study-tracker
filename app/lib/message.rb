@@ -23,7 +23,7 @@ class Message
     'Account created successfully'
   end
 
-  def self.water_created
+  def self.study_created
     'Study data created sucessfully'
   end
 
