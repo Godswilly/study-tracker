@@ -1,0 +1,11 @@
+example_id                                                  | status | run_time        |
+----------------------------------------------------------- | ------ | --------------- |
+./spec/controllers/api/v1/studies_controller_spec.rb[1:2:1] | failed | 0.32796 seconds |
+./spec/models/study_spec.rb[1:1:1]                          | passed | 0.00558 seconds |
+./spec/models/study_spec.rb[1:2:1]                          | passed | 0.00746 seconds |
+./spec/models/study_spec.rb[1:2:2]                          | passed | 0.00893 seconds |
+./spec/models/study_spec.rb[1:2:3]                          | passed | 0.01056 seconds |
+./spec/models/user_spec.rb[1:1:1]                           | passed | 0.00267 seconds |
+./spec/models/user_spec.rb[1:2:1]                           | passed | 0.02139 seconds |
+./spec/models/user_spec.rb[1:2:2]                           | passed | 0.01802 seconds |
+./spec/models/user_spec.rb[1:2:3]                           | passed | 0.01445 seconds |

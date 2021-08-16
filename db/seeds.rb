@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Study.create([
+  { hours: 10, goal: 15},
+  { hours: 20, goal: 30},
+  { hours: 25, goal: 40},
+  { hours: 35, goal: 50}
+])
